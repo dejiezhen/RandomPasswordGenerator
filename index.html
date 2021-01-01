@@ -3,14 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="style.css" rel='stylesheet'></link>
+    <title>Random Password Generator</title>
 </head>
 <body>
-    <div id="container">
-        <p></p>
-        <input type="button" onclick="ascii()" value="Display">
+    <div class='container-class'>
+        <h1>Password Generator</h1>
+        <div>
+            <span id="result"></span>
+            <button class="btn" id="password-result"></button>
+        </div>
+        <div class='password-settings'>
+            <div class='password-settings'>
+                <label>Password Length</label>
+                <input type="number" id='length' min='5' max='20' />
+            </div>
+            <div class='password-settings'>
+                <label>Uppercase</label>
+                <input type="checkbox" id='uppercase' checked/>
+            </div>
+            <div class='password-settings'>
+                <label>Lowercase</label>
+                <input type="checkbox" id='lowercase' checked/>
+            </div>
+            <div class='password-settings'>
+                <label>Numbers</label>
+                <input type="checkbox" id='numbers' checked/>
+            </div>
+            <div class='password-settings'>
+                <label>Special Symbols</label>
+                <input type="checkbox" id='symbols' checked/>
+            </div>
+        </div>
+        <button class='btn btn-gen' id='generate'>Generate Password!</button>
     </div>
-
 
     <script src="randompass.js"></script>
 </body>
